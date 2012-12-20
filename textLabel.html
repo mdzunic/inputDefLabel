@@ -1,0 +1,16 @@
+<input type="text" value="DefaultText" rel="DefaultText" class="nameOfClass" />
+
+<script type="text/javascript">
+$('.nameOfClass').focusin( function() {
+	if($(this).val() == $(this).attr('rel')){
+		$(this).val("");
+		$(this).css("color","black");
+	}
+});
+$('.nameOfClass').focusout( function() {
+	if ($(this).val()==""){
+		$(this).val($(this).attr('rel'));
+		$(this).css("color","#aaa");
+	}
+});
+</script>
